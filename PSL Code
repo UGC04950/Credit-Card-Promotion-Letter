@@ -1,0 +1,210 @@
+{
+ if input["version"] = "C"
+Card
+
+else
+Letter2
+
+function Card do
+
+
+
+% Paper size and background
+setPaperOrientation Landscape
+setbackground cBlack
+setfont "helvetica", 20
+gPosition 1,1
+
+
+setbackground cWhite
+setFont "times-roman", 20
+gPosition 1,1
+
+
+%Images
+gPosition 1.5,3.8
+image getCurrentDirectory&"\\resources\\"&"Key.png",0.2
+
+
+
+gPosition 0,0
+image getCurrentDirectory&"\\resources\\"&"dark.jpg",0.58
+gPosition 10.2,0.5
+image getCurrentDirectory&"\\resources\\"&"Diamond.png",0.32
+
+gPosition 1.5,3.8
+image getCurrentDirectory&"\\resources\\"&"Key.png",0.4
+
+
+ % Bottom Right text
+TPosition 8.2,0.6
+setFont "times-roman", 25
+setColor cWhite
+print "Legacy Bank"
+
+% Credit Card Color
+TPosition 2.8,5
+SetSpacePad 3
+setFont "times-roman", 35
+setColor cWhite
+
+% Credit Card #
+
+
+
+for i = 1 to 10 do
+print integerPartOf 11.5* random
+print " "
+end
+
+
+% Valid thru
+
+
+
+TPosition 5.5,6
+setFont "times-roman", 10
+setColor cWhite
+print "Valid" & newline
+TPosition 5.5,6.2
+print "Thru" & newline
+TPosition 6.0,6.
+print "01/20"
+
+
+
+
+TPosition 1.6,6.9
+setFont "times-roman", 20
+setColor cWhite
+Print merge["Last"] & " , " &  merge["First"]
+
+
+
+
+
+
+% Bottom right Text
+
+TPosition 9.5,8
+setFont "times-roman", 10
+setColor cWhite
+print "Legacy Black Card"
+
+% Function for image files
+
+end
+
+
+
+
+
+% Setting new page for Booklet
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+include "colors.pin"
+
+
+
+
+
+function Letter2 do
+
+setPapersize 11,8.5
+setbackground Grey
+
+
+
+
+
+% Position and 2nd Page Image
+gPosition 4.4,0
+image getCurrentDirectory&"\\resources\\"&"MN.jpg",0.4
+
+
+
+
+
+
+gPosition 0,0
+image getCurrentDirectory&"\\resources\\"&"CV.png",0.54
+
+gPosition 0,3.7
+setOpacity 0.5
+
+image getCurrentDirectory&"\\resources\\"&"city.jpg",0.8
+setOpacity 1
+
+
+
+setFont "helvetica-bold",25
+setColor White
+Tposition 1.5,3.9
+Print "One Card,"
+
+
+setFont "helvetica-bold",25
+setColor Pink
+Tposition 1.6,4.28
+Print "Endless Possibilities!"
+
+
+
+setFont "helvetica-bold",12
+setColor Black
+Tposition 1.55,6.2
+Print "3X" & " Points on Airfare"
+
+
+
+setFont "helvetica-bold",12
+setColor Black
+Tposition 1.55,6.4
+Print "2X" & " Points on Gas "
+
+
+
+setFont "helvetica-bold",11.5
+setColor Black
+Tposition 1.55,6.6
+Print "1X " & "All Other Purchases"
+
+
+
+
+setFont "helvetica-bold",11
+setColor White
+Tposition 8.0,8
+Print "Start Booming Today"
+
+
+
+
+setFont "helvetica-bold",11
+setColor White
+Tposition 7.5, 4.45
+Print merge["Last"] & ", " &  merge["first"]
+
+
+
+setFont "helvetica-bold",11
+setColor White
+Tposition 8.0,4.8
+Print merge["Address"] & " " &  merge["City"]
+
+
+setFont "helvetica-bold",11
+setColor White
+Tposition 8.5,5
+Print merge["St"] & " " &  merge["Zip"]
+setFont "helvetica-bold",11
+setColor White
+
+end
+
+
+}
